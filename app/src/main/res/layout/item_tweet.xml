@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="10dp"
+    android:backgroundTint="#000000"
+    android:backgroundTintMode="add">
 
     <ImageView
         android:id="@+id/ivProfileImage"
@@ -25,7 +27,9 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="3dp"
         android:layout_toEndOf="@+id/ivProfileImage"
-        android:text="Sean Umali" />
+        android:fontFamily="sans-serif-medium"
+        android:text="Sean Umali"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvBody"
@@ -35,6 +39,9 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="6dp"
         android:layout_toEndOf="@+id/ivProfileImage"
+        android:fontFamily="sans-serif-condensed"
+        android:autoLink="all"
+        android:linksClickable="true"
         tools:text="This is what the message of what the tweet contains" />
 
     <TextView
@@ -42,9 +49,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="21dp"
         android:layout_marginTop="3dp"
         android:layout_toEndOf="@+id/tvScreenName"
+        android:fontFamily="sans-serif-light"
+        android:textSize="14sp"
         tools:text="35 min ago" />
 
 </RelativeLayout>

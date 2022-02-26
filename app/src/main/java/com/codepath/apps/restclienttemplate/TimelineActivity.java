@@ -119,7 +119,7 @@ public class TimelineActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
-                Log.i(TAG, "onFailure!" + response, throwable);
+                Log.i("Check for rate", "onFailure!" + response, throwable);
             }
         });
 
