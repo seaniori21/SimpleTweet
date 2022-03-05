@@ -68,6 +68,7 @@ public class TweetsAdapter extends  RecyclerView.Adapter<TweetsAdapter.ViewHolde
         TextView tvBody;
         TextView tvScreenName;
         TextView timeStamp;
+        TextView tvUsername;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -75,12 +76,14 @@ public class TweetsAdapter extends  RecyclerView.Adapter<TweetsAdapter.ViewHolde
             tvBody = itemView.findViewById(R.id.tvBody);
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             timeStamp = itemView.findViewById(R.id.timeStamp);
+            tvUsername = itemView.findViewById(R.id.username);
 
         }
 
         public void bind(Tweet tweet) {
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.name);
+            tvUsername.setText( "@" + tweet.user.screenName);
             Glide.with(context).load(tweet.user.profileImageUrl).transform(new RoundedCorners(50)).into(ivProfileImage);
             timeStamp.setText(tweet.getFormattedTimestamp() + " ago");
         }
